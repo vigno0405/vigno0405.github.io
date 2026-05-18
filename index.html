@@ -123,9 +123,9 @@
           embodied intelligence and impedance-shaped interaction, exploring how
           the natural dynamics of compliant bodies can be harnessed instead of
           canceled, to achieve dexterous manipulation and adaptive locomotion.
-          My goal is to develop principled, data-driven frameworks for
-          perception and control that enable robust and versatile behavior in
-          contact-rich, dynamic environments.
+          My goal is to develop principled frameworks for perception and
+          control that enable robust and versatile behavior in contact-rich
+          environments.
         </p>
       </div>
     </section>
@@ -136,28 +136,42 @@
         <span class="rail-label">Research</span>
       </div>
       <div class="section-content">
-        <h2 class="section-title">Three Pillars</h2>
+        <h2 class="section-title">Three Themes</h2>
         <ol class="themes">
           <li class="theme">
-            <h3>Compliant Control of Soft Robots</h3>
-            <p>Control architectures that exploit the natural dynamics of soft and continuum systems instead of suppressing them.</p>
+            <figure class="theme-img">
+              <img src="assets/hand.jpg" alt="A hand on piano keys, evoking dexterous manipulation" loading="lazy" />
+            </figure>
+            <div class="theme-text">
+              <span class="theme-num">01</span>
+              <h3>Compliant Control of Soft Robots</h3>
+              <p>Control architectures that exploit the natural dynamics of soft and continuum systems instead of suppressing them.</p>
+            </div>
+          </li>
+          <li class="theme flip">
+            <figure class="theme-img">
+              <img src="assets/helyx.jpg" alt="Helyx soft robotic manipulator developed at EPFL CREATE Lab" loading="lazy" />
+              <figcaption>Helyx, EPFL CREATE Lab. © EPFL / Alain Herzog, CC&#8209;BY&#8209;SA&nbsp;4.0.</figcaption>
+            </figure>
+            <div class="theme-text">
+              <span class="theme-num">02</span>
+              <h3>Modeling and Sensing of Compliant Structures</h3>
+              <p>Hybrid analytical and data-driven models for proprioception and state estimation of mechanically intelligent bodies.</p>
+            </div>
           </li>
           <li class="theme">
-            <h3>Modeling and Sensing of Compliant Structures</h3>
-            <p>Hybrid analytical and data-driven models for proprioception and state estimation of mechanically intelligent bodies.</p>
-          </li>
-          <li class="theme">
-            <h3>Design of Bio-Inspired Robots</h3>
-            <p>Robotic platforms drawn from aquatic and terrestrial animals, with morphology and control co-designed for adaptive behavior.</p>
+            <figure class="theme-img">
+              <img src="assets/turtle.jpg" alt="Sea turtle underwater, evoking bio-inspired locomotion" loading="lazy" />
+            </figure>
+            <div class="theme-text">
+              <span class="theme-num">03</span>
+              <h3>Design of Bio-Inspired Robots</h3>
+              <p>Robotic platforms drawn from aquatic and terrestrial animals, with morphology and control co-designed for adaptive behavior.</p>
+            </div>
           </li>
         </ol>
       </div>
     </section>
-
-    <figure class="bleed-figure" aria-hidden="true">
-      <img src="assets/turtle.jpg" alt="" loading="lazy" />
-      <figcaption>Looking to nature for principles of compliant, adaptive motion.</figcaption>
-    </figure>
 
     <section id="education" class="section section-education">
       <div class="section-rail">
@@ -172,24 +186,23 @@
               <h3>Master Thesis, EPFL</h3>
               <span class="ed-meta">6.0 / 6.0</span>
             </div>
-            <p>Vision-based reconstruction and closed-loop control of a soft robotic arm. Advised by Prof. Josie Hughes (EPFL) and Prof. Francesco Braghin (PoliMi).</p>
           </li>
           <li>
             <div class="ed-head">
-              <h3>MSc Data Science for Industrial Engineering</h3>
-              <span class="ed-meta">Politecnico di Milano · 28.9 / 30</span>
+              <h3>Erasmus Semester, EPFL</h3>
+              <span class="ed-meta">6.0 / 6.0</span>
             </div>
           </li>
           <li>
             <div class="ed-head">
-              <h3>BSc Mechanical Engineering</h3>
-              <span class="ed-meta">Politecnico di Milano · 110 / 110 cum laude</span>
+              <h3>MSc Data Science for Industrial Engineering, Politecnico di Milano</h3>
+              <span class="ed-meta">110 / 110 cum laude</span>
             </div>
           </li>
           <li>
             <div class="ed-head">
-              <h3>Alta Scuola Politecnica</h3>
-              <span class="ed-meta">PoliMi &amp; PoliTo Honors Programme</span>
+              <h3>BSc Mechanical Engineering, Politecnico di Milano</h3>
+              <span class="ed-meta">110 / 110 cum laude</span>
             </div>
           </li>
         </ul>
@@ -204,8 +217,8 @@
       <div class="section-content">
         <h2 class="section-title">Reach Out</h2>
         <p class="prose">
-          Email is the fastest way. Always happy to discuss research,
-          collaborations, or anything compliant.
+          Email is the fastest way. Always happy to discuss research and
+          collaborations.
         </p>
         <ul class="links">
           <li><a href="mailto:lorenzo.vignoli@epfl.ch"><span class="link-label">EPFL email</span>lorenzo.vignoli@epfl.ch</a></li>
@@ -236,21 +249,7 @@
     const io = new IntersectionObserver((entries) => {
       entries.forEach((e) => { if (e.isIntersecting) e.target.classList.add('in'); });
     }, { threshold: 0.12 });
-    document.querySelectorAll('.section, .hero, .bleed-figure').forEach((el) => io.observe(el));
-
-    document.querySelectorAll('.theme').forEach((card) => {
-      card.addEventListener('mousemove', (e) => {
-        const r = card.getBoundingClientRect();
-        const x = ((e.clientX - r.left) / r.width) * 100;
-        const y = ((e.clientY - r.top) / r.height) * 100;
-        card.style.setProperty('--mx', x + '%');
-        card.style.setProperty('--my', y + '%');
-      });
-      card.addEventListener('mouseleave', () => {
-        card.style.removeProperty('--mx');
-        card.style.removeProperty('--my');
-      });
-    });
+    document.querySelectorAll('.section, .hero').forEach((el) => io.observe(el));
   </script>
 </body>
 </html>
