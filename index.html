@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lorenzo Vignoli</title>
+  <meta name="description" content="Lorenzo Vignoli, PhD in Robotics at EPFL CREATE Lab. Research on compliant control, soft continuum manipulation, and bio-inspired locomotion." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main>
+    <header class="intro">
+      <div class="intro-text">
+        <h1>Lorenzo Vignoli</h1>
+        <p class="role">PhD in Robotics, EPFL CREATE Lab</p>
+      </div>
+      <img class="portrait" src="assets/lorenzo.jpg" alt="Portrait of Lorenzo Vignoli" />
+    </header>
+
+    <section id="about">
+      <h2>About</h2>
+      <p>
+        My interests lie in the integration of compliant control and machine
+        learning for the design, modeling, and control of soft and continuum
+        mechanical systems, with a particular focus on bio-inspired robotics
+        where rigid-body paradigms are limited. I am especially drawn to
+        embodied intelligence and impedance-shaped interaction, exploring how
+        the natural dynamics of compliant bodies can be harnessed instead of
+        canceled, to achieve dexterous manipulation and adaptive locomotion.
+        My goal is to develop principled, data-driven frameworks for perception
+        and control that enable robust and versatile behavior in contact-rich,
+        dynamic environments.
+      </p>
+    </section>
+
+    <section id="research">
+      <h2>Research</h2>
+
+      <article class="topic">
+        <h3>Compliant Control and Optimization</h3>
+        <p>
+          Virtual Model Control (VMC) and energy-tank passivity for safe,
+          stiffness-modulating interaction. Hybrid architectures combine
+          analytical models (Piecewise Constant Curvature Jacobians) with
+          learning-based inverse kinematics and gradient-descent tuning for
+          redundancy resolution.
+        </p>
+      </article>
+
+      <article class="topic">
+        <h3>Dexterous Manipulation and Soft Continuum Arms</h3>
+        <p>
+          Tendon-driven anthropomorphic hands (ADAPT) with programmable
+          passivity, decoupling grip force from grip stiffness for tasks
+          ranging from piano playing to surgical needle insertion. Continuum
+          manipulators (Trimmed Helicoid) use VMC for whole-body shaping and
+          obstacle avoidance, with vision-based proprioception via embedded
+          miniature cameras and CNN pose estimation.
+        </p>
+        <p class="repo-link">
+          <a href="https://github.com/vigno0405/HumanManipulationVMC">HumanManipulationVMC</a>
+        </p>
+      </article>
+
+      <article class="topic">
+        <h3>Bio-Inspired Locomotion</h3>
+        <p>
+          Multi-modal swimming with two-DOF tendon-driven tails (RoboFish)
+          that transition between anguilliform, carangiform, and thunniform
+          gaits by modulating body impedance. Turtle-inspired soft crawlers
+          built on Variable Stiffness Actuators and open-loop Central Pattern
+          Generators, characterized across flat, granular, and sloped terrains.
+        </p>
+        <p class="repo-link">
+          <a href="https://github.com/vigno0405/ArtiFish">ArtiFish</a>,
+          <a href="https://github.com/vigno0405/Computational_Motor_Control">Computational_Motor_Control</a>
+        </p>
+      </article>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <ul class="links">
+        <li><a href="mailto:lorenzo.vignoli@epfl.ch">lorenzo.vignoli@epfl.ch</a></li>
+        <li><a href="mailto:lorenzo.vignoli0405@gmail.com">lorenzo.vignoli0405@gmail.com</a></li>
+        <li><a href="https://www.linkedin.com/in/lorenzo-vignoli-60274a291">LinkedIn</a></li>
+        <li><a href="https://github.com/vigno0405">GitHub</a></li>
+        <li><a href="assets/CV_Vignoli_Lorenzo.pdf">CV (PDF)</a></li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>&copy; <span id="year"></span> Lorenzo Vignoli</p>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
