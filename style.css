@@ -310,7 +310,7 @@ main {
 .themes {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 4rem 0 0;
   display: flex;
   flex-direction: column;
   gap: 4.5rem;
@@ -439,24 +439,25 @@ main {
   white-space: nowrap;
 }
 
-/* ── Contact ──────────────────────────────────────────── */
+/* ── Contact (3 + 2 centered) ─────────────────────────── */
 .links {
   list-style: none;
   padding: 0;
   margin: 2rem 0 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 0.5rem 2rem;
 }
-.links li { border-top: 1px solid var(--rule); }
-.links li:first-child,
-.links li:nth-child(2) { border-top: 0; }
+.links li {
+  flex: 0 0 calc((100% - 4rem) / 3);
+  min-width: 220px;
+}
 .links a {
   display: flex;
   flex-direction: column;
   padding: 0.85rem 0;
   color: var(--text);
-  border-bottom: 1px solid transparent;
   transition: padding-left 0.2s ease, color 0.2s ease;
 }
 .links a:hover {
@@ -480,6 +481,11 @@ footer {
   font-size: 0.85rem;
   color: var(--muted);
   text-align: center;
+}
+footer p { margin: 0.2rem 0; }
+footer .credits {
+  font-size: 0.75rem;
+  opacity: 0.7;
 }
 
 /* ── Responsive ───────────────────────────────────────── */
